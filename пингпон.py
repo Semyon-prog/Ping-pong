@@ -1,4 +1,9 @@
 from pygame import *
+font.init(
+score1 = 0
+score2 = 0
+font1 = font.SysfFont("Arial", 80)
+font2 = font.SysFont("Areal", 36
 class GameSprite(sprite.Sprite):
     def __init__(self, player_image, player_x, player_y, player_speed, wigth, height):
         super().__init__()
@@ -67,10 +72,12 @@ while game:
         if ball.rect.x < 0:
             finish = True
             window.blit(lose1, (200, 200))
-        
+            game over = True
+            
         if ball.rect.x < win_width:
             finish = True
             window.blit(lose2, (200, 200))
+            game over = True
 
         racket1.reset()
         racket2.reset()
